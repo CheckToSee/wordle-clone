@@ -69,6 +69,10 @@ export function submitLine() {
 
 
   if (guess == answer) {
+    for (let k=0; k<5; k++) {
+      rowList[k].style.backgroundColor = '#538D4E';
+      rowList[k].style.borderColor = '#538D4E';
+    }
     gameWon()
   } else if (rowCounter < 7 && boxCounter == 5) {
     for (let i=0;i<5;i++) {
@@ -127,5 +131,4 @@ export function resetGame() {
 
 export function gameWon() {
   console.log('YOU WIN!')
-  resetGame()
 }

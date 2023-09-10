@@ -33,7 +33,7 @@ const Hero = () => {
         {/* GUESS BOXES */}
         <div className='grid grid-rows-6 gap-1 mt-3'>
           <div className='h-14 grid grid-cols-5 gap-1'>
-            <div className={`row1 h-14 w-14 border-2 flex justify-center items-center text-3xl font-bold ${ !logic.keyHighlight ? `border-[#565758]` : `border-[#3A3A3C]` }`}></div>
+            <div className='row1 h-14 w-14 border-2 border-[#3A3A3C] flex justify-center items-center text-3xl font-bold'></div>
             <div className='row1 h-14 w-14 border-2 border-[#3A3A3C] flex justify-center items-center text-3xl font-bold'></div>
             <div className='row1 h-14 w-14 border-2 border-[#3A3A3C] flex justify-center items-center text-3xl font-bold'></div>
             <div className='row1 h-14 w-14 border-2 border-[#3A3A3C] flex justify-center items-center text-3xl font-bold'></div>

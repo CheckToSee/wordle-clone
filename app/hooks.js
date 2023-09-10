@@ -14,10 +14,9 @@ export function keypress(keydown) {
     deleteLetter()
   } else if (keydown.key == 'Enter') {
     submitLine()
-  } else if (boxCounter < 5 && rowCounter < 7) {
+  } else if (boxCounter < 5 && rowCounter < 7 && /^[A-Za-z]$/.test(letter)) {
     rowList[boxCounter].innerHTML = letter;
     rowList[boxCounter].style.borderColor = '#565758';
-    console.log(boxCounter)
     boxCounter++;
   }
 }

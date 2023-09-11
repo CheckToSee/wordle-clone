@@ -1,3 +1,6 @@
+import * as hero from '../components/Hero.jsx'
+import { toast } from 'react-toastify';
+
 let boxCounter = 0;
 let rowCounter = 1;
 let answer = 'bison';
@@ -59,6 +62,7 @@ export function deleteLetter() {
 
 // FIX YELLOW ON EVERY LETTER
 export function submitLine() {
+
   let guess = getLine();
   guess = guess.toLowerCase();
   let guessUpper = guess.toUpperCase();
@@ -105,7 +109,18 @@ export function submitLine() {
     }
     boxCounter = 0;
     rowCounter++;
-  }
+  } else if (boxCounter < 5) {
+    toast('Not enough letters', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "light",
+    });
+  } // else if (NOT IN WORDLIST) {toast(stuff)}
 }
 
 export function getLine() {
@@ -135,6 +150,7 @@ export function resetGame() {
   rowCounter = 1;
 }
 
+// ADD UI ELEMENT HERE
 export function gameWon() {
   console.log('YOU WIN!')
 }

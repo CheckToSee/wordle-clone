@@ -35,16 +35,16 @@ export function keyClick(keydown) {
 }
 
 // IGNORE FOR NOW
-export function keyHighlight(keydown) {
-  const rowList = Array.from(
-    document.getElementsByClassName('row' + rowCounter),
-  );
-  console.log(keydown.target.value);
-  if (keydown.target.innerHTML == '') {
-    return true;
-  }
-  return false;
-}
+// export function keyHighlight(keydown) {
+//   const rowList = Array.from(
+//     document.getElementsByClassName('row' + rowCounter),
+//   );
+//   console.log(keydown.target.value);
+//   if (keydown.target.innerHTML == '') {
+//     return true;
+//   }
+//   return false;
+// }
 
 export function deleteLetter() {
   const rowList = Array.from(
@@ -61,16 +61,19 @@ export function deleteLetter() {
 export function submitLine() {
   let guess = getLine();
   guess = guess.toLowerCase();
+  let guessUpper = guess.toUpperCase();
+  console.log(guessUpper);
+
   let tileColor = '';
   const rowList = Array.from(
     document.getElementsByClassName('row' + rowCounter),
   );
 
-
   if (guess == answer) {
     for (let k=0; k<5; k++) {
       rowList[k].style.backgroundColor = '#538D4E';
       rowList[k].style.borderColor = '#538D4E';
+      document.getElementById(guessUpper[k]).style.backgroundColor = '#538D4E';
     }
     gameWon()
   } else if (rowCounter < 7 && boxCounter == 5) {
@@ -89,12 +92,15 @@ export function submitLine() {
       if (tileColor[j] == 'g') {
         rowList[j].style.backgroundColor = '#538D4E';
         rowList[j].style.borderColor = '#538D4E';
+        document.getElementById(guessUpper[j]).style.backgroundColor = '#538D4E';
       } else if (tileColor[j] == 'y') {
         rowList[j].style.backgroundColor = '#B59F3B';
         rowList[j].style.borderColor = '#B59F3B';
+        document.getElementById(guessUpper[j]).style.backgroundColor = '#B59F3B';
       } else {
         rowList[j].style.backgroundColor = '#3A3A3C';
         rowList[j].style.borderColor = '#3A3A3C';
+        document.getElementById(guessUpper[j]).style.backgroundColor = '#3A3A3C';
       }
     }
     boxCounter = 0;
@@ -113,6 +119,7 @@ export function getLine() {
   return guess;
 }
 
+// ADD STUFF TO RESET KEYBOARD
 export function resetGame() {
   for (let i=1;i<7;i++) {
     const rowList = Array.from(

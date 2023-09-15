@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { RiDeleteBack2Line } from 'react-icons/ri'
-import * as logic from '../app/hooks.js'
+import * as logic from '../app/logic.js'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'

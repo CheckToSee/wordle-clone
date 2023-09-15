@@ -1,4 +1,3 @@
-import * as hero from '../components/Hero.jsx'
 import { toast } from 'react-toastify';
 
 let boxCounter = 0;
@@ -112,7 +111,7 @@ export function submitLine() {
   } else if (boxCounter < 5) {
     toast('Not enough letters', {
       position: "top-center",
-      autoClose: 2000,
+      autoClose: 900,
       hideProgressBar: true,
       closeOnClick: false,
       pauseOnHover: false,

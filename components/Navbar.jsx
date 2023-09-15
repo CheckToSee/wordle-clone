@@ -4,7 +4,7 @@ import React from 'react'
 import { AiFillSetting } from 'react-icons/ai'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import * as logic from '../app/hooks.js'
+import * as logic from '../app/logic.js'
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         <h1 className='text-3xl font-extrabold'>Wordle</h1>
       </div>
       <div className='w-full flex flex-[1] justify-end items-center mr-4 border-b border-b-[#3A3A3C] h-full'>
-        <button onClick={logic.resetGame} className='px-3 py-1 bg-white text-black text-sm rounded-lg mr-4 hover:cursor-pointer'>New Word</button>
+        <button onClick={logic.resetGame} className='px-3 py-1 bg-white text-black text-sm font-semibold rounded-lg mr-4 hover:cursor-pointer'>New Word</button>
         <BsFillInfoCircleFill size={24} className='mr-2' />
         <AiFillSetting size={32} />
       </div>

@@ -1,5 +1,6 @@
 # Wordle Clone
-Wordle clone created using React.
+Wordle clone created using React.  
+Notification API using Toast.
 
 ## Preview
 ![alt text](https://raw.githubusercontent.com/CheckToSee/wordle-clone/main/public/preview1.png)

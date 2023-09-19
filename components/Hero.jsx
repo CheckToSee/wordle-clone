@@ -90,7 +90,7 @@ const Hero = () => {
               <button value='T' id="T" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>T</button>
               <button value='Y' id="Y" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>Y</button>
               <button value='U' id="U" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>U</button>
-              <button value='i' id="I" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>I</button>
+              <button value='I' id="I" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>I</button>
               <button value='O' id="O" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>O</button>
               <button value='P' id="P" className='bg-[#818384] w-10 h-14 rounded-[4px] font-bold ml-[6px]' onClick={logic.keyClick}>P</button>
             </div>

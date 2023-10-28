@@ -80,10 +80,14 @@ export function submitLine() {
     }
     gameWon()
   } else if (rowCounter < 7 && boxCounter == 5) {
+    let maxYellow = 5;
     for (let i=0;i<5;i++) {
       if (guess[i] == answer[i]) {
         tileColor += 'g';
       } else if (answer.includes(guess[i])) {
+        // for (let j=0;j<5;j++) {
+          
+        // }
         tileColor += 'y'
       } else {
         tileColor += 'n'

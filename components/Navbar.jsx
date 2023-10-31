@@ -15,6 +15,9 @@ const Navbar = () => {
 
   return (
     <>
+      <div className={rules ? 'h-screen backdrop-blur-sm text-black z-[100] absolute w-full flex justify-center items-center' : 'hidden' } onClick={handleRules}>
+        <div className='w-[500px] h-[650px] bg-[#121213]'></div>
+      </div>
       <div className='h-[68px] w-full top-0 flex flex-row items-center border-b'>
         <div className='w-full h-full flex flex-[1] ml-4 items-center border-b border-b-[#3A3A3C]'>
           <GiHamburgerMenu size={22} />
@@ -28,8 +31,6 @@ const Navbar = () => {
           <AiFillSetting size={32} />
         </div>
       </div>
-      {/*NOTE: Finish implementing rules popup*/}
-      {/*<div className={rules ? 'w-full h-screen bg-black text-black z-[100] absolute' : 'hidden'}>hi</div>*/}
     </>
   )
 }
